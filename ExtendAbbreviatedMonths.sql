@@ -20,6 +20,7 @@ set dateExpression = replace(dateExpression, 'Feb','February')
 where dateExpression LIKE '%Feb'
 or dateExpression LIKE '%Feb %'
 or dateExpression LIKE 'Feb %';
+update ResourcesComponents
 set dateExpression = replace(dateExpression, 'Febuary','February')
 where dateExpression LIKE 'Febuary'
 or dateExpression LIKE '%Febuary%'
