@@ -123,3 +123,36 @@ set dateExpression = replace(dateExpression, 'Dec','December')
 where dateExpression LIKE '%Dec'
 or dateExpression LIKE '%Dec %'
 or dateExpression LIKE 'Dec %';
+/*Other abbreviations*/
+update yale_dev.ResourcesComponents
+set dateExpression = replace(dateExpression, 'c.','circa')
+where dateExpression LIKE '% c.%'
+or dateExpression LIKE '% C.%';
+update yale_dev.ResourcesComponents
+set dateExpression = replace(dateExpression, 'c.','Circa')
+where dateExpression LIKE 'c.%'
+or dateExpression LIKE 'C.%';
+update yale_dev.ResourcesComponents
+set dateExpression = replace(dateExpression, 'ca.','circa')
+where dateExpression LIKE '% ca.%'
+or dateExpression LIKE '% Ca.%';
+update yale_dev.ResourcesComponents
+set dateExpression = replace(dateExpression, 'ca.','Circa')
+where dateExpression LIKE 'ca.%'
+or dateExpression LIKE 'Ca.%';
+update yale_dev.ResourcesComponents
+set dateExpression = replace(dateExpression, 'ca','circa')
+where dateExpression LIKE '% ca %'
+or dateExpression LIKE '% Ca %';
+update yale_dev.ResourcesComponents
+set dateExpression = replace(dateExpression, 'ca','Circa')
+where dateExpression LIKE 'ca %'
+or dateExpression LIKE 'Ca %';
+update yale_dev.ResourcesComponents
+set dateExpression = replace(dateExpression, 'n.d.','Undated')
+where dateExpression LIKE 'n.d.%'
+or dateExpression LIKE 'n.d.'
+update yale_dev.ResourcesComponents
+set dateExpression = replace(dateExpression, 'n.d.','undated')
+where dateExpression LIKE '%n.d.'
+or dateExpression LIKE '%n.d.%';
